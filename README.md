@@ -10,6 +10,7 @@ Then i added nerdaxe drivers
 
 (you can refer to original documentation to docs/README)
 
+![mainimage](https://github.com/nerdaxe/cgminer-nerdaxe/assets/170173099/225fb131-2dfd-42b4-9ac4-3d40583ed5e4)
 
 
 
