@@ -7,5 +7,5 @@ sudo ./make_environement.sh
 sudo reboot
 when reboot was finish :
 
-./build_gekko.sh
+./build_nerdaxe.sh
 
