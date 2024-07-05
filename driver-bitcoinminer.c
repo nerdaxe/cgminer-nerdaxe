@@ -1442,13 +1442,11 @@ static void btm_update_rates(struct cgpu_info *bitcoinminer)
 	    struct timeval now;
 	    cgtime(&now);
 	    if((now.tv_sec - info->last_send_hashrate_display.tv_sec) >= 60) {
-	           uint32_t baudrate = 115200;
+	           _init_cp2102(bitcoinminer,115200);
 	           uint16_t c = 0x0002;
 	            c |= 0x0002;
 	            c |= 0x0300;
-	            libusb_control_transfer(bitcoinminer->usbdev->handle, (LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_ENDPOINT_OUT), 0x07, c, 0, NULL, 0, 1000);	            
-                usb_transfer_data(bitcoinminer, CP210X_TYPE_OUT, CP210X_REQUEST_BAUD,
-                                                0, info->interface, &baudrate, sizeof (baudrate), C_SETBAUD);
+	            libusb_control_transfer(bitcoinminer->usbdev->handle, (LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_ENDPOINT_OUT), 0x07, c, 0, NULL, 0, 1000);	   
 	            btm_usleep(info, MS2US(2));
 	            int read_bytes = 0;
 	            char empty[] = "0\r\n";
@@ -1473,9 +1471,7 @@ static void btm_update_rates(struct cgpu_info *bitcoinminer)
 	                btm_usleep(info, MS2US(2));
 			        
 			    }
-			    baudrate = 1500000;
-			    usb_transfer_data(bitcoinminer, CP210X_TYPE_OUT, CP210X_REQUEST_BAUD,
-                                                0, info->interface, &baudrate, sizeof (baudrate), C_SETBAUD);
+	            _init_cp2102(bitcoinminer,1500000);
 			    c = 0x0002;
 	            c |= 0x0300;
 	            c &= ~(0x0002);
