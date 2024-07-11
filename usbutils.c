@@ -574,6 +574,18 @@ static struct usb_find_devices find_dev[] = {
 		INTINFO(btm_ints) },
 {
 		.drv = DRIVER_bitcoinminer,
+		.name = "ultimate v1",
+		.ident = IDENT_BTV1,
+		.idVendor = 0x10c4,
+		.idProduct = 0xAA11,
+		.iManufacturer = "nerdaxe",
+		.iProduct = "ULTIMATE v1",
+		.config = 1,
+		.timeout = COMPAC_TIMEOUT_MS,
+		.latency = LATENCY_UNUSED,
+		INTINFO(btm_ints) },
+{
+		.drv = DRIVER_bitcoinminer,
 		.name = "POCKET",
 		.ident = IDENT_POCKET,
 		.idVendor = 0x1a86,
