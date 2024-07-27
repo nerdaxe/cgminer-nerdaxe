@@ -1,6 +1,7 @@
 # nerdaxe
 ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="AA10", SUBSYSTEM=="usb", ACTION=="add", MODE="0660", GROUP="plugdev"
 ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="AA11", SUBSYSTEM=="usb", ACTION=="add", MODE="0660", GROUP="plugdev"
+ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="EA60", SUBSYSTEM=="usb", ACTION=="add", MODE="0660", GROUP="plugdev"
 
 # Butterfly Labs FPGA and ASIC devices
 ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6014", SUBSYSTEM=="usb", ACTION=="add", MODE="0660", GROUP="plugdev"
