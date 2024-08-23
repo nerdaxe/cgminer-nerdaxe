@@ -596,6 +596,19 @@ static struct usb_find_devices find_dev[] = {
 		.timeout = COMPAC_TIMEOUT_MS,
 		.latency = LATENCY_UNUSED,
 		INTINFO(btm_ints_pocket) },
+
+{
+		.drv = DRIVER_bitcoinminer,
+		.name = "POCKET",
+		.ident = IDENT_POCKET,
+		.idVendor = 0x9986,
+		.idProduct = 0x7523,
+		.iManufacturer = "nerdaxe",
+		.iProduct = "POCKET",
+		.config = 1,
+		.timeout = COMPAC_TIMEOUT_MS,
+		.latency = LATENCY_UNUSED,
+		INTINFO(btm_ints_pocket) },
 #endif
 #ifdef USE_BFLSC
 	/* Wish these guys would be more consistent with setting these fields */
